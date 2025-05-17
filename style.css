@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", serif;
+  user-select: none;
+}
+:root {
+  --fbColor: #4267b248;
+  --twtrColor: #1da0f236;
+  --ytColor: #ff000086;
+  --instaColor: #c330886e;
+  --gthbColor: #2b3137;
+  --whtapColor: #3ec34e65;
+  --linkdColor: #0077b5;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #442d4d; */
+  background-color: #17011f;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .card {
+  position: relative;
+  height: 200px;
+  width: 180px;
+  color: #e9e9e9;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+  cursor: pointer;
+
+  /* মার্জিন পরে - মাইনাস করে দিতে হবে */
+  margin: 0 -45px;
+}
+.container .card::before {
+  position: absolute;
+  content: attr(data-text);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  line-height: 40px;
+  letter-spacing: 1px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.3s;
+}
+.container .card i {
+  margin-top: -30px;
+}
+
+.container .card:nth-child(1) {
+  /* transform: rotate(-15deg); */
+  z-index: 4;
+}
+.container .card:nth-child(2) {
+  /* transform: rotate(-10deg); */
+  z-index: 3;
+}
+.container .card:nth-child(3) {
+  /* transform: rotate(-5deg); */
+  z-index: 2;
+}
+.container .card:nth-child(4) {
+  /* transform: rotate(-3deg); */
+  z-index: 1;
+}
+.container .card:nth-child(5) {
+  z-index: 0;
+}
+.container:hover .card {
+  transform: rotate(0);
+  margin: 0 10px;
+}
+
+.container .card:hover:nth-child(1) {
+  background: var(--fbColor);
+  box-shadow: 0 0 10px 5px var(--fbColor);
+  transition: 0.3s;
+  transform: scale(1.1);
+  margin: 0 20px;
+}
+.container .card:hover:nth-child(2) {
+  background: var(--ytColor);
+  box-shadow: 0 0 10px 5px var(--ytColor);
+  border: 1px solid #ad4d4d;
+  transition: 0.3s;
+  transform: scale(1.1);
+  margin: 0 20px;
+}
+.container .card:hover:nth-child(3) {
+  background: var(--twtrColor);
+  box-shadow: 0 0 10px 5px var(--twtrColor);
+  transition: 0.3s;
+  transform: scale(1.1);
+  margin: 0 20px;
+}
+.container .card:hover:nth-child(4) {
+  background: var(--whtapColor);
+  box-shadow: 0 0 10px 5px var(--whtapColor);
+  transition: 0.3s;
+  transform: scale(1.1);
+  margin: 0 20px;
+}
+.container .card:hover:nth-child(5) {
+  background: var(--instaColor);
+  box-shadow: 0 0 10px 5px var(--instaColor);
+  transition: 0.3s;
+  transform: scale(1.1);
+  margin: 0 20px;
+}
+
+.container .card:hover::before {
+  background: #00000023;
+}
+
+.card:nth-child(4) i,
+.card:nth-child(5) i {
+  font-size: 38px;
+}
